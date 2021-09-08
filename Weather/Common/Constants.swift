@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: - Open Weather API
 let kOpenWeatherKey = "b6d447dafb8225b6c5eb620862595515"
@@ -14,7 +15,14 @@ let kWeatherUnit = "weather?"
 let kGroupUnit = "group?"
 let kMetric = "metric"
 
+//MARK: - VC ID
+let kDetailViewControllerID = "DetailViewControllerID"
 
 //MARK: - Cell ID
 let kHomeWeatherViewCellID = "HomeWeatherViewCellID"
 let kQueryTableViewCellID = "QueryTableViewCellID"
+let kDetailCollectionViewCellID = "DetailCollectionViewCellID"
+
+//MARK: UI layout
+let screenRect = UIScreen.main.bounds
+let kCollectionCellPadding: CGFloat = 20

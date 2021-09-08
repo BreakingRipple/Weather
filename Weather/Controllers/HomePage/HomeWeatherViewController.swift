@@ -16,24 +16,21 @@ class HomeWeatherViewController: UITableViewController {
         super.viewDidLoad()
 
         title = "Weather"
-        let urlStr = urlStrGroup(cityIDs)
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let url = URL(string: urlStr) {
-                if let data = try? Data(contentsOf: url) {
-                    self.parse(json: data)
-                } else {
-                    self.showError()
-                }
-            } else {
-                self.showError()
-            }
-        }
-
+        fetchWeatherInfoByIDs()
+        Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(updatePeriodically), userInfo: nil, repeats: true)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let weatherInformation = groupWeatherInformation[indexPath.row]
+        if let vc = storyboard?.instantiateViewController(identifier: kDetailViewControllerID) as? DetailViewController {
+            vc.weatherInformation = weatherInformation
+            navigationController?.pushViewController(vc, animated: true)
+        }
         
+    }
+    
+    @objc func updatePeriodically(){
+        fetchWeatherInfoByIDs()
     }
     
 
@@ -77,9 +74,15 @@ class HomeWeatherViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let vc = segue.destination as! QueryViewController
+        vc.delegate = self
     }
-    
 
+}
+
+extension HomeWeatherViewController: QueryViewControllerDelegate{
+    func didAddCity(_ cityID: Int) {
+        cityIDs.append(cityID)
+        fetchWeatherInfoByIDs()
+    }
 }

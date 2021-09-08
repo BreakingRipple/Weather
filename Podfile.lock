@@ -1,16 +1,20 @@
 PODS:
+  - DateToolsSwift (5.0.0)
   - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
+  - DateToolsSwift
   - MBProgressHUD (~> 1.2.0)
 
 SPEC REPOS:
   trunk:
+    - DateToolsSwift
     - MBProgressHUD
 
 SPEC CHECKSUMS:
+  DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
-PODFILE CHECKSUM: 5493cd2f6e56e817c61a82f23b29e52145b1c8e8
+PODFILE CHECKSUM: 52f3cdadcb4f5bc997325b47bec8947661ffebf1
 
 COCOAPODS: 1.10.2

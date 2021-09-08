@@ -8,12 +8,21 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import DateToolsSwift
 
 extension String{
     var isBlank: Bool{
         self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 }
+
+extension Date{
+
+    var formattedDate: String{
+        return "\(format(with: "HH:mm"))"
+    }
+}
+
 
 extension UIViewController{
     

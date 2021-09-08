@@ -8,7 +8,7 @@
 import UIKit
 
 protocol QueryViewControllerDelegate {
-    func didAddCity()
+    func didAddCity(_ cityID: Int)
 }
 
 class QueryViewController: UIViewController {
@@ -75,7 +75,9 @@ extension QueryViewController: UITableViewDataSource{
 
 extension QueryViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let cityID = filteredCities[indexPath.row].id
+        delegate?.didAddCity(cityID)
+        dismiss(animated: true)
     }
 }
 

@@ -9,6 +9,23 @@ import UIKit
 
 extension HomeWeatherViewController{
     
+    func fetchWeatherInfoByIDs(){
+        let urlStr = urlStrGroup(cityIDs)
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            if let url = URL(string: urlStr) {
+                if let data = try? Data(contentsOf: url) {
+                    self.parse(json: data)
+                } else {
+                    self.showError()
+                }
+            } else {
+                self.showError()
+            }
+        }
+    }
+    
+    
     func urlStrGroup(_ cityIDs: [Int]) -> String{
         var idUnit = "id="
         let idCount = cityIDs.count

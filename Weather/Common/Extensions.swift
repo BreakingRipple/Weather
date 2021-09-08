@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
+extension String{
+    var isBlank: Bool{
+        self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+}
+
 extension UIViewController{
     
     //MARK: Display loading view and indicating view

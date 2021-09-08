@@ -17,3 +17,4 @@ let kMetric = "metric"
 
 //MARK: - Cell ID
 let kHomeWeatherViewCellID = "HomeWeatherViewCellID"
+let kQueryTableViewCellID = "QueryTableViewCellID"

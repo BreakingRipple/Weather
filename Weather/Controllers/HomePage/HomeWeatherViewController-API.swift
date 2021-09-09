@@ -46,6 +46,7 @@ extension HomeWeatherViewController{
             groupWeatherInformation = jsonGroupWeatherInfo.list
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.hideLoadHUD()
             }
         }
     }
@@ -57,9 +58,6 @@ extension HomeWeatherViewController{
             self.present(ac, animated: true)
         }
     }
-    
-    
-    
 }
     
     

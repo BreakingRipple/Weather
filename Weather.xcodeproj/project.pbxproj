@@ -29,6 +29,7 @@
 		2E8413F526E8AB90006DB877 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8413F426E8AB90006DB877 /* DetailViewController.swift */; };
 		2E8413F826E8D34F006DB877 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8413F726E8D34F006DB877 /* DetailCollectionViewCell.swift */; };
 		2E8413FA26E8EED3006DB877 /* DetailWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8413F926E8EED3006DB877 /* DetailWeatherModel.swift */; };
+		2E8413FE26E980D6006DB877 /* QueryViewController-keywordsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8413FD26E980D6006DB877 /* QueryViewController-keywordsSearch.swift */; };
 		2E866CBB26E7C0C70048B472 /* WeatherInformationGroupVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E866CBA26E7C0C70048B472 /* WeatherInformationGroupVersion.swift */; };
 		2E866CBD26E7C79E0048B472 /* HomeWeatherViewController-DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E866CBC26E7C79E0048B472 /* HomeWeatherViewController-DataSource.swift */; };
 		2E866CBF26E845340048B472 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E866CBE26E845340048B472 /* QueryViewController.swift */; };
@@ -66,6 +67,8 @@
 		2E8413F426E8AB90006DB877 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2E8413F726E8D34F006DB877 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		2E8413F926E8EED3006DB877 /* DetailWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherModel.swift; sourceTree = "<group>"; };
+		2E8413FC26E92AC7006DB877 /* Weather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weather-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E8413FD26E980D6006DB877 /* QueryViewController-keywordsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueryViewController-keywordsSearch.swift"; sourceTree = "<group>"; };
 		2E866CBA26E7C0C70048B472 /* WeatherInformationGroupVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformationGroupVersion.swift; sourceTree = "<group>"; };
 		2E866CBC26E7C79E0048B472 /* HomeWeatherViewController-DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWeatherViewController-DataSource.swift"; sourceTree = "<group>"; };
 		2E866CBE26E845340048B472 /* QueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 			children = (
 				2E3DCEA526E7679100149F59 /* AppDelegate.swift */,
 				2E3DCEA726E7679200149F59 /* SceneDelegate.swift */,
+				2E8413FC26E92AC7006DB877 /* Weather-Bridging-Header.h */,
 				2E866CCC26E861DA0048B472 /* startCities.json */,
 				2E866CCE26E864170048B472 /* cityList.json */,
 				2E3DCECA26E7861000149F59 /* Models */,
@@ -188,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				2E866CBE26E845340048B472 /* QueryViewController.swift */,
+				2E8413FD26E980D6006DB877 /* QueryViewController-keywordsSearch.swift */,
 				2E866CC226E84C680048B472 /* QueryTableViewCell.swift */,
 			);
 			path = QueryPage;
@@ -364,6 +369,7 @@
 				2E3DCED626E7868900149F59 /* Sys.swift in Sources */,
 				2E8413F826E8D34F006DB877 /* DetailCollectionViewCell.swift in Sources */,
 				2E3DCEC226E771B600149F59 /* HomeWeatherViewController.swift in Sources */,
+				2E8413FE26E980D6006DB877 /* QueryViewController-keywordsSearch.swift in Sources */,
 				2E3DCED026E7865F00149F59 /* Main.swift in Sources */,
 				2E3DCEA626E7679100149F59 /* AppDelegate.swift in Sources */,
 				2E3DCEA826E7679200149F59 /* SceneDelegate.swift in Sources */,
@@ -532,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylansun.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weather/Weather-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -552,6 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylansun.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weather/Weather-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

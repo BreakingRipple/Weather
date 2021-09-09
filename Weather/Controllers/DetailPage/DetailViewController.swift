@@ -100,7 +100,6 @@ extension DetailViewController: UICollectionViewDataSource{
 extension DetailViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print("aaa")
         let cellW = (screenRect.width - kCollectionCellPadding * 5) / 2
         let cellH = cellW
         return CGSize(width: cellW, height: cellH)

@@ -26,6 +26,7 @@ extension HomeWeatherViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: kHomeWeatherViewCellID, for: indexPath) as! HomeWeatherViewCell
         cell.cityNameLabel.text = weatherInfo.name
         cell.cityTemperatureLabel.text = String(weatherInfo.main.temp) + " ˚C"
+        cell.countryLabel.text = weatherInfo.sys.country
 
         return cell
     }

@@ -23,7 +23,6 @@ extension Date{
     }
 }
 
-
 extension UIViewController{
     
     //MARK: Display loading view and indicating view
@@ -63,3 +62,4 @@ extension UIViewController{
         view.endEditing(true)
     }
 }
+

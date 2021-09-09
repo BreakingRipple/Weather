@@ -11,8 +11,7 @@ class HomeWeatherViewCell: UITableViewCell {
     
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var cityTemperatureLabel: UILabel!
-    
-    
+    @IBOutlet weak var countryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

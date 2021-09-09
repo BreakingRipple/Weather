@@ -25,33 +25,13 @@ class QueryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showLoadHUD("loading data")
+        
         if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton{
             cancelButton.isEnabled = true
         }
 
-        if let url = Bundle.main.url(forResource: "cityList", withExtension: "json"){
-            if let data = try? Data(contentsOf: url) {
-                self.parse(json: data)
-            } else {
-                print("fail to parse json data")
-            }
-        } else {
-            print("cannot find the json file")
-        }
-    }
-    
-    func parse(json: Data) {
-        
-        let decoder = JSONDecoder()
-        if let jsonCityList = try? decoder.decode(CityList.self, from: json) {
-            cities = jsonCityList.cityList
-            filteredCities = cities
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        } else {
-            print("aaa")
-        }
+        fetchWeatherInfoByKeywords()
     }
 }
 
@@ -80,8 +60,6 @@ extension QueryViewController: UITableViewDelegate{
         dismiss(animated: true)
     }
 }
-
-
 
 extension QueryViewController: UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) { dismiss(animated: true) }

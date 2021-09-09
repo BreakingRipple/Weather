@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 //MARK: - Open Weather API
-let kOpenWeatherKey = "b6d447dafb8225b6c5eb620862595515"
+let kOpenWeatherKey = "xxxxxxxxxxxxxxxxxxx"
 let KBaseURLString = "https://api.openweathermap.org/data/2.5/"
 let kWeatherUnit = "weather?"
 let kGroupUnit = "group?"
